@@ -2,6 +2,8 @@ import Footer from '../components/Footer'
 import Navigation from '../components/Navigation'
 import { getProfile, fileUrl } from '../lib/sanity'
 
+export const revalidate = 0
+
 export default async function CvPage() {
   const profile = await getProfile()
   const cvUrl = profile?.cv ? fileUrl(profile.cv) : null

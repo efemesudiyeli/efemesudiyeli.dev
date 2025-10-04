@@ -16,7 +16,8 @@ export function urlFor(source: SanityImage) {
 }
 
 export function fileUrl(source: SanityFile): string {
-  return `https://cdn.sanity.io/files/${client.config().projectId}/${client.config().dataset}/${source.asset._ref.replace('file-', '').replace('-pdf', '.pdf').replace('-doc', '.doc').replace('-docx', '.docx')}`
+  const timestamp = Date.now()
+  return `https://cdn.sanity.io/files/${client.config().projectId}/${client.config().dataset}/${source.asset._ref.replace('file-', '').replace('-pdf', '.pdf').replace('-doc', '.doc').replace('-docx', '.docx')}?t=${timestamp}`
 }
 
 // Blog queries
