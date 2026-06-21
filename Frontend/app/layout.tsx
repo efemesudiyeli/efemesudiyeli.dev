@@ -124,6 +124,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
+        <Script src="https://wheelluck-demo.onrender.com/widget.js" type="text/javascript" id="wheelluck-script" defer={true}></Script>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-QVW4203M8E"></Script>
         <Script id="gtag-init">{`
   window.dataLayer = window.dataLayer || [];
