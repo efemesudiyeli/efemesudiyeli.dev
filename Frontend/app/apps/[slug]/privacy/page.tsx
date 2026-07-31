@@ -129,11 +129,11 @@ export default async function PrivacyPolicyPage({ params }: PageProps) {
               </p>
               <div className="flex items-center text-blue-600">
                 <Mail size={16} className="mr-2" />
-                <a 
-                  href="mailto:efemesudiyeli@icloud.com"
+                <a
+                  href="mailto:efemesudiyeli@gmail.com"
                   className="hover:text-blue-800 transition-colors"
                 >
-                  efemesudiyeli@icloud.com
+                  efemesudiyeli@gmail.com
                 </a>
               </div>
             </div>
