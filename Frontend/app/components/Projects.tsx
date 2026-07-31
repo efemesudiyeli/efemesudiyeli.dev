@@ -1,5 +1,6 @@
 import { ExternalLink, Github } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Project } from '../types'
 import { urlFor } from '../lib/sanity'
 
@@ -21,72 +22,96 @@ export default function Projects({ projects }: ProjectsProps) {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project._id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-            >
-              {project.image && (
-                <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                  <Image
-                    src={urlFor(project.image).width(800).height(450).quality(90).url()}
-                    alt={project.title}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority={false}
-                  />
-                </div>
-              )}
-              
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {project.description}
-                </p>
-                
-                {project.technologies && (
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+          {projects.map((project) => {
+            const isPackwork = project.title.toLowerCase().includes('packwork');
+            return (
+              <div
+                key={project._id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              >
+                {project.image && (
+                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
+                    {isPackwork ? (
+                      <Link href="/packwork" className="block w-full h-full relative cursor-pointer">
+                        <Image
+                          src={urlFor(project.image).width(800).height(450).quality(90).url()}
+                          alt={project.title}
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-300"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          priority={false}
+                        />
+                      </Link>
+                    ) : (
+                      <Image
+                        src={urlFor(project.image).width(800).height(450).quality(90).url()}
+                        alt={project.title}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={false}
+                      />
+                    )}
                   </div>
                 )}
 
-                <div className="flex space-x-4">
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
-                    >
-                      <Github size={20} className="mr-2" />
-                      Github
-                    </a>
+                <div className="p-6">
+                  {isPackwork ? (
+                    <Link href="/packwork" className="hover:text-blue-600 transition-colors inline-block cursor-pointer">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {project.title}
+                      </h3>
+                    </Link>
+                  ) : (
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {project.title}
+                    </h3>
                   )}
-                  {project.appStoreUrl && (
-                    <a
-                      href={project.appStoreUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
-                    >
-                      <ExternalLink size={20} className="mr-2" />
-                      App Store
-                    </a>
+                  <p className="text-gray-600 mb-4">
+                    {project.description}
+                  </p>
+
+                  {project.technologies && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   )}
+
+                  <div className="flex space-x-4">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                      >
+                        <Github size={20} className="mr-2" />
+                        Github
+                      </a>
+                    )}
+                    {project.appStoreUrl && (
+                      <a
+                        href={project.appStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                      >
+                        <ExternalLink size={20} className="mr-2" />
+                        App Store
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {projects.length === 0 && (

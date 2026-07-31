@@ -2,14 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const phrases = [
-    "Pack Smarter.",
-    "Travel Lighter.",
-    "Never Forget.",
-    "Avoid Fees."
-];
-
-export default function HeroHeadline() {
+export default function HeroHeadline({ phrases }: { phrases: string[] }) {
     const [index, setIndex] = useState(0);
     const [fade, setFade] = useState(true);
 
@@ -23,7 +16,7 @@ export default function HeroHeadline() {
         }, 2500); // cycle duration
 
         return () => clearInterval(interval);
-    }, []);
+    }, [phrases.length]);
 
     return (
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 text-black min-h-[4rem] md:min-h-[5rem] flex items-center justify-center overflow-hidden">

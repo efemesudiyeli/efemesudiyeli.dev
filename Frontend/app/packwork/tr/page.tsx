@@ -7,11 +7,11 @@ import {
     ArrowRight, Download, Briefcase, Scale, ListTodo, Cloud, RefreshCw, Zap
 } from 'lucide-react';
 import Link from 'next/link';
-import HeroHeadline from './HeroHeadline';
+import HeroHeadline from '../HeroHeadline';
 
 export const metadata: Metadata = {
-    title: 'Packwork | The Intelligent Packing Assistant',
-    description: 'Packwork helps you prevent overweight bags and forgotten gear tailored to your specific trip.',
+    title: 'Packwork | Akıllı Bavul Hazırlama Asistanı',
+    description: 'Packwork, aşım ücretlerinden kurtulmanızı ve seyahatinize özel eşyaları asla unutmamanızı sağlayan akıllı asistanınızdır.',
 };
 
 export default function PackworkLanding() {
@@ -20,9 +20,9 @@ export default function PackworkLanding() {
 
             {/* Product Hunt Launch Banner */}
             <div className="bg-[#DA552F] text-white px-4 py-3 text-center text-sm md:text-base font-medium flex justify-center items-center">
-                <span>🎉 We are live on Product Hunt! We&apos;d love your feedback and support.</span>
+                <span>🎉 Product Hunt'tayız! Geri bildirimleriniz ve desteğiniz bizim için çok değerli.</span>
                 <a href="https://www.producthunt.com/products/packwork-smart-packing-list" target="_blank" rel="noopener noreferrer" className="ml-2 underline font-bold hover:text-white/80 transition">
-                    Check it out
+                    İncele
                 </a>
             </div>
 
@@ -37,17 +37,17 @@ export default function PackworkLanding() {
                             <span className="font-semibold text-lg tracking-tight">Packwork</span>
                         </div>
                         <div className="hidden md:flex space-x-8 text-sm font-medium">
-                            <a href="#features" className="text-gray-600 hover:text-black transition">Features</a>
-                            <a href="#pro" className="text-gray-600 hover:text-black transition">Packwork Pro</a>
-                            <a href="#faq" className="text-gray-600 hover:text-black transition">FAQ</a>
-                            <a href="https://packwork.canny.io" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition">Feedback</a>
+                            <a href="#features" className="text-gray-600 hover:text-black transition">Özellikler</a>
+                            <a href="#pro" className="text-gray-600 hover:text-black transition">Packwork PRO</a>
+                            <a href="#faq" className="text-gray-600 hover:text-black transition">SSS</a>
+                            <a href="https://packwork.canny.io" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition">Geri Bildirim</a>
                         </div>
                         <div className="flex items-center space-x-4">
-                            <Link href="/packwork/tr" className="text-xs font-bold text-gray-400 hover:text-gray-900 transition-colors uppercase">
-                                TR
+                            <Link href="/packwork" className="text-xs font-bold text-gray-400 hover:text-gray-900 transition-colors uppercase">
+                                EN
                             </Link>
                             <a href="#download" className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition">
-                                Get the App
+                                Uygulamayı İndir
                             </a>
                         </div>
                     </div>
@@ -57,20 +57,20 @@ export default function PackworkLanding() {
             {/* Hero Section */}
             <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center max-w-5xl mx-auto flex flex-col items-center">
                 <HeroHeadline phrases={[
-                    "Pack Smarter.",
-                    "Travel Lighter.",
-                    "Never Forget.",
-                    "Avoid Fees."
+                    "Daha Akıllıca Hazırlan.",
+                    "Daha Hafif Seyahat Et.",
+                    "Asla Unutma.",
+                    "Ekstra Ücret Ödeme."
                 ]} />
                 <div className="flex justify-center items-center space-x-3 mb-8 mt-2 opacity-90 transition-opacity">
-                    <span className="text-2xl md:text-3xl font-light text-gray-400">with</span>
                     <div className="w-9 h-9 md:w-11 md:h-11 rounded-[10px] overflow-hidden shadow-sm border border-gray-200/60">
                         <Image src="/packwork/Packwork-iOS-Default-1024x1024@1x.png" alt="Packwork Logo" width={44} height={44} className="w-full h-full object-cover" />
                     </div>
                     <span className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900">Packwork</span>
+                    <span className="text-2xl md:text-3xl font-light text-gray-400 pl-2">ile</span>
                 </div>
                 <p className="text-xl md:text-2xl text-gray-500 mb-4 max-w-3xl mx-auto font-light leading-relaxed mt-2">
-                    Not just a checklist - an intelligent packing assistant that prevents overweight bags and remembers the gear specific to your trip.
+                    Sıradan bir liste uygulaması değil! Valiziniz için ağırlık aşımlarını engelleyen, seyahatinize özel eşyaları hatırlayan akıllı hazırlık asistanınız.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
                     {/* App Store Download Button */}
@@ -95,30 +95,30 @@ export default function PackworkLanding() {
             <section className="py-24 bg-white" id="features">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Built around real packing problems.</h2>
-                        <p className="text-xl text-gray-500 max-w-2xl mx-auto">Tackle overweight baggage limits and forgotten niche gear with ease.</p>
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Gerçek problemlere mükemmel çözümler.</h2>
+                        <p className="text-xl text-gray-500 max-w-2xl mx-auto">Ağır bagaj limitleriyle ve unutulan eşyalarla kolayca başa çıkın.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                         <FeatureCard
                             icon={<Scale />}
-                            title="Weigh In Before The Airport Does"
-                            description="Pick your airline (Turkish Airlines, Pegasus, Emirates, etc.) and Packwork auto-fills real cabin & checked-bag weight limits. Drag items into visual compartments and watch the live weight gauge."
+                            title="Havaalanına Gitmeden Limitleri Görün"
+                            description="Havayolunuzu (THY, Pegasus, Emirates vb.) seçin ve Packwork kabin/kayıtlı bagaj limitlerinizi otomatik doldursun. Eşyaları görsel çantalara ekleyin ve anlık ağırlık takibi yapın."
                         />
                         <FeatureCard
                             icon={<ListTodo />}
-                            title="A Checklist That Knows Your Trip"
-                            description="Flying with a pet? Sports gear? Fragile items? Packwork auto-seeds your list with specific documents and steps required. Dismiss what doesn't apply, and it stays dismissed."
+                            title="Seyahatinizi Bilen Akıllı Liste"
+                            description="Evcil hayvanla uçuş? Spor ekipmanı? Packwork size otomatik olarak yapmanız gerekenleri (örn. aşı kağıdı, bagaj bildirimi) listeleyerek özel durumlardaki stresi ortadan kaldırır."
                         />
                         <FeatureCard
                             icon={<RefreshCw />}
-                            title="Round Trip Ready"
-                            description="Pack once for the way there. Packwork automatically resets your list for the flight home a day before departure, so you can repack your luggage and never leave anything behind."
+                            title="Gidiş ve Dönüşe Hazır"
+                            description="Giderken hazırlanın, dönerken gerisini Packwork'e bırakın. Uçuşunuzdan bir gün önce listeniz dönüş için otomatik sıfırlanır, hiçbir eşyanızı otelde unutmazsınız."
                         />
                         <FeatureCard
                             icon={<Cloud />}
-                            title="Seamless Apple Ecosystem"
-                            description="Private iCloud sync keeps your trips, luggage, and catalog updated across all your Apple devices. Plus, enjoy Home/Lock Screen Widgets and Dynamic Island Live Activities."
+                            title="Kusursuz Apple Ekosistemi"
+                            description="Özel iCloud senkronizasyonu tüm gezilerinizi Apple cihazlarınız arasında güvende tutar. Widgetlar ve Dynamic Island desteğiyle kilidi açmadan eşya işaretleyin."
                         />
                     </div>
                 </div>
@@ -128,29 +128,29 @@ export default function PackworkLanding() {
             <section className="py-32 bg-[#F5F5F7]" id="how-it-works">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-24">
-                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Everything a good packing app should do.</h2>
-                        <p className="text-xl text-gray-500">Plan, pack, and review seamlessly.</p>
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">İyi bir seyahat asistanının yapması gereken her şey.</h2>
+                        <p className="text-xl text-gray-500">Planlayın, hazırlanın ve kusursuzca yola çıkın.</p>
                     </div>
 
                     <div className="space-y-32">
                         <StepItem
                             step="1"
-                            title="Plan your perfect trip"
-                            description="Start blank or use templates like Business Trip or Beach Holiday. Utilize our 60+ built-in catalog items with estimated weights across Clothing, Electronics, Toiletries, and more."
-                            imageSrc="/packwork/EN 2.png"
+                            title="Kusursuz planınızı yapın"
+                            description="Sıfırdan bir gezi oluşturun ya da İş Seyahati ve Yaz Tatili gibi şablonları kullanın. Giyimden elektroniğe, ağırlıkları önceden hesaplanmış 60'tan fazla hazır eşyayı çantanıza ekleyin."
+                            imageSrc="/packwork/TR2.png"
                         />
                         <StepItem
                             step="2"
-                            title="Pack effortlessly"
-                            description="Switch to Pack mode to check items off as you go. Track partial packing (e.g., 3 of 5 T-shirts). Toggle items directly from your Lock Screen or Dynamic Island without unlocking your phone."
-                            imageSrc="/packwork/EN 3.png"
+                            title="Zahmetsizce hazırlanın"
+                            description="Eşyalarınızı bavula yerleştirdikçe yanlarındaki alanı işaretleyin. (Örn: 5 tişörtün 3'ü). Telefon kilidinizi bile açmadan Dynamic Island veya Kilit Ekranı üzerinden anında işaretleme yapın."
+                            imageSrc="/packwork/TR 3.png"
                             reversed={true}
                         />
                         <StepItem
                             step="3"
-                            title="Review and improve"
-                            description="Enjoy a quiet feedback loop. Packwork learns what you skip and asks what stayed in your bag post-trip, so your future packing suggestions get smarter."
-                            imageSrc="/packwork/EN 5.png"
+                            title="Son kontrollerinizi yapın"
+                            description="Sessiz geri bildirim döngüsünün tadını çıkarın. Packwork, seyahate hazırlıkta hangi eşyaları atladığınızı analiz ederek bir sonraki tatiliniz için çok daha akıllı ve yerinde öneriler sunar."
+                            imageSrc="/packwork/TR 5.png"
                         />
                     </div>
                 </div>
@@ -169,15 +169,15 @@ export default function PackworkLanding() {
                                 <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Packwork PRO</h2>
                             </div>
                             <p className="text-xl text-gray-400 mb-10 max-w-2xl font-light">
-                                Unlock the full potential of intelligent packing with advanced suggestions, real-time weather integration, and ultimate customization.
+                                Gelişmiş hava durumu tahminleri, limitsiz donanımlar ve tam özelleştirmelerle bavul hazırlamanın tam potansiyeline ulaşın.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-gray-300">
-                                <ProFeatureItem text="Smart Suggestions based on weather and your packing history." />
-                                <ProFeatureItem text="Live weather chip pulling 5-day forecasts around your departure." />
-                                <ProFeatureItem text="Multiple bags per trip (cabin, checked, and personal items)." />
-                                <ProFeatureItem text="Custom packing presets applied with one tap." />
-                                <ProFeatureItem text="Custom categories and items with your own icons and weights." />
-                                <ProFeatureItem text="Accent color themes and independent light/dark modes." />
+                                <ProFeatureItem text="Gideceğiniz yerin anlık havasına göre akıllı giyim önerileri." />
+                                <ProFeatureItem text="Seyahatinizi kapsayan canlı 5 günlük hava durumu rozetleri." />
+                                <ProFeatureItem text="Her seyahat için birden fazla valiz (kabin, kayıtlı ve kişisel)." />
+                                <ProFeatureItem text="Tek tıkla uygulanabilen hazır özel valiz şablonlarınız." />
+                                <ProFeatureItem text="Kendi ikonlarınız ve ebatlarınızla sınırsız özel kategori/eşya yaratma." />
+                                <ProFeatureItem text="Uygulamaya özel vurgu renkleri ve bağımsız Dark/Light modları." />
                             </div>
                         </div>
                     </div>
@@ -187,9 +187,9 @@ export default function PackworkLanding() {
             {/* Download CTA */}
             <section className="py-24 bg-[#F5F5F7] text-center" id="download">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Ready to travel lighter?</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">Daha hafif uçmaya hazır mısınız?</h2>
                     <p className="text-xl text-gray-500 mb-10 max-w-2xl mx-auto">
-                        Stop paying overweight fees and forgetting your essentials.
+                        Aniden çıkan havayolu ödemelerini ve evde unuttuğunuz eşya krizlerini bugün bitirin.
                     </p>
                     <div className="flex justify-center">
                         {/* App Store Download Button */}
@@ -204,20 +204,20 @@ export default function PackworkLanding() {
             <section className="py-24 bg-white" id="faq">
                 <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Frequently Asked Questions</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Sıkça Sorulan Sorular</h2>
                     </div>
                     <div className="space-y-6">
-                        <FaqItem question="Does it know the baggage limit for my airline?" answer="Yes! Packwork supports major airlines like Turkish Airlines, Pegasus, AJet, SunExpress, Lufthansa, and Emirates. When you select your airline, it automatically fills in the real cabin and checked baggage weight limits." />
-                        <FaqItem question="How does the smart checklist work?" answer="Depending on your trip, Packwork auto-seeds your list with specific required steps. For example, if you're flying with a pet, sports gear, or fragile items, it will remind you of vaccination records or oversized-item check-in procedures." />
-                        <FaqItem question="Can I use it for round trips?" answer="Absolutely! Pack once for the way there, and Packwork will automatically reset your list for the flight home a day before your departure, ensuring you never leave anything behind." />
-                        <FaqItem question="Can I check off items without unlocking my phone?" answer="Yes. With Apple's Dynamic Island Live Activities and Lock / Home Screen Widgets, you can easily toggle packed items directly from your screen." />
-                        <FaqItem question="Does it sync across my devices?" answer="Yes. Packwork uses private iCloud sync to keep your trips, luggage, and item catalog securely synced across all your Apple devices." />
-                        <FaqItem question="What additional features does Packwork PRO offer?" answer="Packwork PRO is designed for frequent travelers. It includes smart suggestions based on real-time weather and personal packing history, live 5-day weather chips, multiple bags (cabin & checked) per trip, and complete customization of item categories." />
+                        <FaqItem question="Havayolumun limitlerini biliyor mu?" answer="Evet! Packwork; THY, Pegasus, AJet, SunExpress, Emirates gibi dev havayollarını destekler. Biletinize göre havayolunu seçtiğinizde bagaj ağırlık sınırları sistem tarafından otomatik atanır." />
+                        <FaqItem question="Akıllı görev atama sistemi nasıl çalışıyor?" answer="Uçuş türünüze göre (evcil hayvan/spor vb.) Packwork listenize uyarıları otomatik entegre eder. Örneğin, köpeğinizle uçuyorsanız 'Aşı kağıdı, kimlik bildirimi onaylandı mı?' gibi kritik adımlar kendi kendine eklenir." />
+                        <FaqItem question="Gidiş-Dönüş için de uygun mu?" answer="Kesinlikle! Giderken valizinizi kusursuz yapın, Packwork dönüş uçuşunuzdan hemen önce otelden çıkarken listeyi otomatik sıfırlar; böylece tatil dönüşü eşyalarınızı otele hediye etmemiş olursunuz." />
+                        <FaqItem question="Telefonumun kilidini açmadan listemi düzenleyebilir miyim?" answer="Evet. Lock Screen / Home Screen araç takımları (widget) ve Apple Dynamic Island Live Activities sayesinde bir elinizde valiz varken anlık işaretleme yapabilirsiniz." />
+                        <FaqItem question="Telefonlar arası senkronize oluyor mu?" answer="Evet. Tüm listeler, valizler ve verileriniz Apple ekosistemi üzerinden yüksek güvenlikli kişisel iCloud hesabınızla senkronizedir." />
+                        <FaqItem question="Packwork PRO ekstra ne gibi detaylar veriyor?" answer="Packwork PRO çok gezenler için tasarlandı! Gidilecek lokasyona özel (hava koşullarına yönelik) kıyafet önerileri sunar, 5-günlük hava durumunu gösterir, ekstra bagaj tiplerine izin verir ve temayı bütünüyle kişiselleştirmenizi sağlar." />
                         <FaqItem
-                            question="Can I suggest a new feature or report a bug?"
+                            question="Yeni bir özellik önerebilir ya da hata bildirebilir miyim?"
                             answer={
                                 <span>
-                                    Yes! We actively listen to our community. You can visit our <a href="https://packwork.canny.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold">Feedback Board</a> to suggest new features, vote on existing ideas from other users, or report any issues. Your input directly shapes the future development of Packwork!
+                                    Evet! Topluluğumuzu sürekli dinliyoruz. Yeni fikirlerinizi iletmek, başkalarının fikirlerini oylamak ya da bir sorunu bize anında bildirmek için <a href="https://packwork.canny.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-semibold">Geri Bildirim</a> panomuzu istediğiniz an ziyaret edebilirsiniz. Fikirlerinizle ilerlemek bizim için en büyük değerdir.
                                 </span>
                             }
                         />
@@ -235,12 +235,12 @@ export default function PackworkLanding() {
                         <span className="font-semibold text-lg tracking-tight text-gray-800">Packwork</span>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-                        <a href="https://packwork.canny.io" target="_blank" rel="noopener noreferrer" className="hover:text-black transition">Request a Feature</a>
-                        <a href="https://www.efemesudiyeli.com/apps/packwork/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-black transition">Privacy Policy</a>
-                        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula" target="_blank" rel="noopener noreferrer" className="hover:text-black transition">Terms of Use</a>
+                        <a href="https://packwork.canny.io" target="_blank" rel="noopener noreferrer" className="hover:text-black transition">Özellik İsteyin</a>
+                        <a href="https://www.efemesudiyeli.com/apps/packwork/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-black transition">Gizlilik Politikası</a>
+                        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula" target="_blank" rel="noopener noreferrer" className="hover:text-black transition">Kullanım Şartları</a>
                     </div>
                     <div className="mt-4 md:mt-0 text-sm text-gray-400">
-                        &copy; {new Date().getFullYear()} Packwork. All rights reserved.
+                        &copy; {new Date().getFullYear()} Packwork. Tüm hakları saklıdır.
                     </div>
                 </div>
             </footer>
@@ -265,7 +265,7 @@ function StepItem({ step, title, description, imageSrc, reversed = false }: { st
     return (
         <div className={`flex flex-col md:flex-row items-center justify-between gap-12 ${reversed ? 'md:flex-row-reverse' : ''}`}>
             <div className="flex-1 space-y-6">
-                <div className="text-blue-600 font-bold text-sm tracking-widest uppercase">Step {step}</div>
+                <div className="text-blue-600 font-bold text-sm tracking-widest uppercase">Adım {step}</div>
                 <h3 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h3>
                 <p className="text-xl text-gray-500 font-light leading-relaxed max-w-lg">{description}</p>
             </div>
