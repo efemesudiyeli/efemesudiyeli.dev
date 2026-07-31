@@ -1,10 +1,8 @@
 import { Metadata } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
 import {
-    Apple, Shield, Package, MapPin,
-    Smartphone, CreditCard, ChevronDown, CheckCircle, Check,
-    ArrowRight, Download, Briefcase, Scale, ListTodo, Cloud, RefreshCw, Zap
+    ChevronDown, Check,
+    Scale, ListTodo, Cloud, RefreshCw, Zap
 } from 'lucide-react';
 import Link from 'next/link';
 import HeroHeadline from '../HeroHeadline';
@@ -20,7 +18,7 @@ export default function PackworkLanding() {
 
             {/* Product Hunt Launch Banner */}
             <div className="bg-[#DA552F] text-white px-4 py-3 text-center text-sm md:text-base font-medium flex justify-center items-center">
-                <span>🎉 Product Hunt'tayız! Geri bildirimleriniz ve desteğiniz bizim için çok değerli.</span>
+                <span>🎉 Product Hunt&apos;tayız! Geri bildirimleriniz ve desteğiniz bizim için çok değerli.</span>
                 <a href="https://www.producthunt.com/products/packwork-smart-packing-list" target="_blank" rel="noopener noreferrer" className="ml-2 underline font-bold hover:text-white/80 transition">
                     İncele
                 </a>
@@ -75,16 +73,19 @@ export default function PackworkLanding() {
                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
                     {/* App Store Download Button */}
                     <a href="#" className="hover:scale-105 transition-transform flex items-center justify-center drop-shadow-lg opacity-90 hover:opacity-100 cursor-pointer w-[180px] h-[60px] sm:w-[200px] sm:h-[66px] overflow-hidden rounded-xl">
-                        <img src="/packwork/download-appstore-logo.svg" alt="Download on the App Store" className="w-[120%] h-[120%] object-cover object-center block select-none pointer-events-none" draggable={false} />
+                        <Image src="/packwork/download-appstore-logo.svg" alt="Download on the App Store" width={216} height={72} className="w-[120%] h-[120%] object-cover object-center block select-none pointer-events-none" draggable={false} />
                     </a>
 
                     {/* Product Hunt Embed Badge */}
                     <a href="https://www.producthunt.com/products/packwork-smart-packing-list?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-packwork-smart-packing-list" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform flex items-center justify-center opacity-95 hover:opacity-100 cursor-pointer h-[60px] sm:h-[66px]">
-                        <img
+                        <Image
                             src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1211794&theme=light&t=1785520953770"
                             alt="Packwork: Smart Packing List - Pack smarter, travel lighter, never forget anything! | Product Hunt"
+                            width={250}
+                            height={54}
                             className="h-full w-auto block select-none pointer-events-none drop-shadow-sm"
                             draggable={false}
+                            unoptimized
                         />
                     </a>
                 </div>
@@ -194,7 +195,7 @@ export default function PackworkLanding() {
                     <div className="flex justify-center">
                         {/* App Store Download Button */}
                         <a href="#" className="hover:scale-105 transition-transform flex items-center justify-center drop-shadow-xl opacity-90 hover:opacity-100 mt-4 cursor-pointer w-[200px] h-[66px] sm:w-[240px] sm:h-[80px] overflow-hidden rounded-xl mx-auto">
-                            <img src="/packwork/download-appstore-logo.svg" alt="Download on the App Store" className="w-[120%] h-[120%] object-cover object-center block select-none pointer-events-none" draggable={false} />
+                            <Image src="/packwork/download-appstore-logo.svg" alt="Download on the App Store" width={288} height={96} className="w-[120%] h-[120%] object-cover object-center block select-none pointer-events-none" draggable={false} />
                         </a>
                     </div>
                 </div>
