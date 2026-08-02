@@ -72,7 +72,7 @@ export default function PackworkLanding() {
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
                     {/* App Store Download Button */}
-                    <a href="#" className="hover:scale-105 transition-transform flex items-center justify-center drop-shadow-lg opacity-90 hover:opacity-100 cursor-pointer w-[180px] h-[60px] sm:w-[200px] sm:h-[66px] overflow-hidden rounded-xl">
+                    <a href="https://apps.apple.com/us/app/packwork-smart-packing-list/id6780204756" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform flex items-center justify-center drop-shadow-lg opacity-90 hover:opacity-100 cursor-pointer w-[180px] h-[60px] sm:w-[200px] sm:h-[66px] overflow-hidden rounded-xl">
                         <Image src="/packwork/download-appstore-logo.svg" alt="Download on the App Store" width={216} height={72} className="w-[120%] h-[120%] object-cover object-center block select-none pointer-events-none" draggable={false} />
                     </a>
 
@@ -194,7 +194,7 @@ export default function PackworkLanding() {
                     </p>
                     <div className="flex justify-center">
                         {/* App Store Download Button */}
-                        <a href="#" className="hover:scale-105 transition-transform flex items-center justify-center drop-shadow-xl opacity-90 hover:opacity-100 mt-4 cursor-pointer w-[200px] h-[66px] sm:w-[240px] sm:h-[80px] overflow-hidden rounded-xl mx-auto">
+                        <a href="https://apps.apple.com/us/app/packwork-smart-packing-list/id6780204756" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform flex items-center justify-center drop-shadow-xl opacity-90 hover:opacity-100 mt-4 cursor-pointer w-[200px] h-[66px] sm:w-[240px] sm:h-[80px] overflow-hidden rounded-xl mx-auto">
                             <Image src="/packwork/download-appstore-logo.svg" alt="Download on the App Store" width={288} height={96} className="w-[120%] h-[120%] object-cover object-center block select-none pointer-events-none" draggable={false} />
                         </a>
                     </div>
