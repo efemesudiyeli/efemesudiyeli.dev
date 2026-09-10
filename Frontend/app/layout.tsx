@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script";
-
+import Maintenance from "./components/Maintenance";
 
 const helveticaNeue = localFont({
   src: [
@@ -121,6 +121,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isMaintenance = process.env.MAINTENANCE_MODE === "true";
+
   return (
     <html lang="tr">
       <head>
@@ -135,7 +137,7 @@ export default function RootLayout({
       <body
         className={`${helveticaNeue.variable} antialiased`}
       >
-        {children}
+        {isMaintenance ? <Maintenance /> : children}
       </body>
     </html>
   );
